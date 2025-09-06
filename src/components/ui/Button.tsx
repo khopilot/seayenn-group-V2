@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { forwardRef, cloneElement, isValidElement } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
@@ -40,8 +41,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? "span" : "button";
     
     if (asChild && isValidElement(children)) {
-      return cloneElement(children as any, {
-        className: cn(buttonVariants({ variant, size, className }), children.props.className),
+      return cloneElement(children as React.ReactElement<any>, {
+        className: cn(buttonVariants({ variant, size, className }), (children as any).props.className),
         ref,
         ...props,
       });

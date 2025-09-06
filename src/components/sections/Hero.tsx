@@ -34,7 +34,7 @@ export default function Hero() {
               </h2>
               <p className="mt-6 text-base font-barlow leading-7 text-white max-w-2xl mx-auto drop-shadow-md">
                 Seayeen Group is your trusted partner for sustainable investment opportunities
-                across Cambodia's most promising sectors.
+                across Cambodia&apos;s most promising sectors.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Button size="lg" variant="default" className="shadow-xl">

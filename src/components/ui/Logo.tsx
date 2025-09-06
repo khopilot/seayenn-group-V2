@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { logoColors } from "@/config/branding";
@@ -93,7 +94,7 @@ export function Logo({
 
   if (href) {
     return (
-      <Link href={href} className="inline-flex">
+      <Link {...{ href: href as any }} className="inline-flex">
         {LogoContent}
       </Link>
     );

@@ -13,11 +13,11 @@ export default function FAQAccordion() {
 
   const filteredData = useMemo(() => {
     if (!searchQuery.trim()) {
-      return { type: "categories", data: faqData };
+      return { type: "categories" as const, data: faqData };
     }
 
     const searchResults = searchFAQs(searchQuery);
-    return { type: "search", data: searchResults };
+    return { type: "search" as const, data: searchResults };
   }, [searchQuery]);
 
   return (
@@ -89,7 +89,7 @@ export default function FAQAccordion() {
                   Found {filteredData.data.length} matching question{filteredData.data.length !== 1 ? "s" : ""}
                 </p>
               </div>
-              {(filteredData.data as any[]).map((item, index) => (
+              {filteredData.data.map((item, index) => (
                 <FAQItem key={item.id} item={item} index={index} />
               ))}
             </div>

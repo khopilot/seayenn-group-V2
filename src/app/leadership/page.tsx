@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { MessageCircle } from "lucide-react";
@@ -78,15 +77,15 @@ export default function LeadershipPage() {
                 Our Journey
               </h2>
               <p className="text-lg font-barlow text-brand-gray mb-6 leading-relaxed">
-                The Seayeen Group story began with Brett Goulding's vision in the lush 
+                The Seayeen Group story began with Brett Goulding&apos;s vision in the lush 
                 landscapes of North-Eastern Cambodia. With a desire to harness the 
-                region's rich agricultural and real estate potential, the company rapidly expanded 
+                region&apos;s rich agricultural and real estate potential, the company rapidly expanded 
                 into diverse sectors.
               </p>
               <p className="text-lg font-barlow text-brand-gray leading-relaxed">
                 Today the group stands as a testament to enduring commitment and visionary 
                 leadership. Poised to set new benchmarks, we continue to contribute to 
-                Cambodia's growth story and its future of limitless possibilities.
+                Cambodia&apos;s growth story and its future of limitless possibilities.
               </p>
             </div>
             <div className="relative h-80 rounded-xl overflow-hidden shadow-xl">

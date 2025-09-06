@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
@@ -96,26 +95,26 @@ export default function Testimonials() {
               
               <div className="relative z-10">
                 <p className="text-brand-gray text-base font-barlow leading-relaxed mb-6 italic">
-                  {testimonials[currentIndex].content}
+                  {testimonials[currentIndex]?.content}
                 </p>
                 
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
                     <div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-xl">
-                      {testimonials[currentIndex].author[0]}
+                      {testimonials[currentIndex]?.author[0]}
                     </div>
                   </div>
                   
                   <div>
                     <h4 className="font-barlow font-semibold text-brand-dark">
-                      {testimonials[currentIndex].author}
+                      {testimonials[currentIndex]?.author}
                     </h4>
                     <p className="text-sm font-barlow text-brand-gray">
-                      {testimonials[currentIndex].role}
+                      {testimonials[currentIndex]?.role}
                     </p>
-                    {testimonials[currentIndex].company && (
+                    {testimonials[currentIndex]?.company && (
                       <p className="text-sm font-barlow text-brand-gray">
-                        {testimonials[currentIndex].company}
+                        {testimonials[currentIndex]?.company}
                       </p>
                     )}
                   </div>

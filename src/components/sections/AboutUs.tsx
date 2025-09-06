@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
-import { Globe, TrendingUp, Handshake, Target, Building2, ArrowRight, Quote } from "lucide-react";
+import { Globe, TrendingUp, Handshake, Target } from "lucide-react";
 
 const features = [
   {

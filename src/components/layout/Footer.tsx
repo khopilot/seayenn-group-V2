@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Logo } from "@/components/ui/Logo";
 import { 
@@ -78,12 +77,12 @@ export default function Footer() {
               <ul className="space-y-2">
                 {footerSections.company.links.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <a
                       href={link.href}
                       className="text-sm font-barlow hover:text-white transition-colors"
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -95,12 +94,12 @@ export default function Footer() {
               <ul className="space-y-2">
                 {footerSections.services.links.map((link) => (
                   <li key={link.name}>
-                    <Link
+                    <a
                       href={link.href}
                       className="text-sm font-barlow hover:text-white transition-colors"
                     >
                       {link.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -136,12 +135,12 @@ export default function Footer() {
               © 2024 Seayeen Group. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm font-barlow hover:text-white transition-colors">
+              <a href="/privacy" className="text-sm font-barlow hover:text-white transition-colors">
                 Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-sm font-barlow hover:text-white transition-colors">
+              </a>
+              <a href="/terms" className="text-sm font-barlow hover:text-white transition-colors">
                 Terms of Service
-              </Link>
+              </a>
             </div>
           </div>
         </div>

@@ -1,21 +1,17 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { 
   Plane, 
   Heart, 
-  Shield, 
   Users, 
   Globe, 
-  Phone, 
   MessageCircle,
   CheckCircle,
-  ArrowRight,
   Activity,
   Stethoscope,
   Briefcase
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/layout/Container";
-import Link from "next/link";
 import { brandColors } from "@/config/branding";
 
 export const metadata: Metadata = {
@@ -84,11 +80,11 @@ export default function MedicalRepatriationPage() {
   const processSteps = [
     {
       title: "Initial Consultation",
-      description: "The first step in our medical repatriation process involves a detailed assessment of the patient's condition and requirements. Our team works closely with families and healthcare providers to plan the safest and most efficient repatriation strategy."
+      description: "The first step in our medical repatriation process involves a detailed assessment of the patient&apos;s condition and requirements. Our team works closely with families and healthcare providers to plan the safest and most efficient repatriation strategy."
     },
     {
       title: "Coordination with Medical Facilities",
-      description: "We liaise with medical facilities both at the departure point and the destination to ensure a seamless care transition. Our team handles all communications and arrangements, focusing on the patient's health and safety."
+      description: "We liaise with medical facilities both at the departure point and the destination to ensure a seamless care transition. Our team handles all communications and arrangements, focusing on the patient&apos;s health and safety."
     },
     {
       title: "Handling Logistics",
@@ -144,7 +140,7 @@ export default function MedicalRepatriationPage() {
             </h2>
             <p className="text-lg font-barlow text-white/80 mb-8 leading-relaxed">
               Our experience and global network make us a leader in medical repatriation services. 
-              Our team's expertise in handling logistical challenges combined with our commitment 
+              Our team&apos;s expertise in handling logistical challenges combined with our commitment 
               to compassionate care ensures patients receive the highest quality service in their 
               time of need. Trust us to manage your medical repatriation with professionalism and empathy.
             </p>
@@ -293,7 +289,7 @@ export default function MedicalRepatriationPage() {
             <p className="text-seayeen-200 font-barlow mb-4">Why Choose Seayeen Group</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
               Our experience and global network make us a leader in medical repatriation services. 
-              Our team's expertise in handling logistical challenges combined with our commitment 
+              Our team&apos;s expertise in handling logistical challenges combined with our commitment 
               to compassionate care ensures patients receive the highest quality service in their 
               time of need. Trust us to manage your medical repatriation with professionalism and empathy.
             </h2>

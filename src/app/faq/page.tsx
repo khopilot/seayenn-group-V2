@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { HelpCircle, MessageCircle, Phone, ArrowRight } from "lucide-react";
 import FAQAccordion from "@/components/faq/FAQAccordion";
 import { Button } from "@/components/ui/Button";
@@ -85,7 +85,7 @@ export default function FAQPage() {
                     Still have questions?
                   </h2>
                   <p className="mb-8 text-lg font-barlow text-seayeen-100 max-w-2xl mx-auto">
-                    Can't find the answer you're looking for? Our expert team is ready to help you with personalized assistance.
+                    Can&apos;t find the answer you&apos;re looking for? Our expert team is ready to help you with personalized assistance.
                   </p>
                   
                   <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

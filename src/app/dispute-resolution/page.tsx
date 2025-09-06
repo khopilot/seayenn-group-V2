@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { 
   Scale,
   FileText,
@@ -8,7 +8,6 @@ import {
   DollarSign,
   Briefcase,
   Users,
-  MessageCircle,
   ArrowRight,
   Play,
   Shield,
@@ -18,8 +17,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/layout/Container";
-import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Dispute Resolution & Debt Recovery | Seayeen Group",
@@ -79,7 +76,7 @@ export default function DisputeResolutionPage() {
               Navigating Debt Recovery in Cambodia with Expertise and Integrity
             </h1>
             <p className="text-lg font-barlow text-seayeen-100 mb-8 leading-relaxed">
-              At Seayeen Group, we're familiar with the unique challenges of debt recovery within Cambodia's distinct business environment. 
+              At Seayeen Group, we&apos;re familiar with the unique challenges of debt recovery within Cambodia&apos;s distinct business environment. 
               Our approach, grounded in extensive experience is designed to navigate these complexities effectively. 
               Through our specialized debt recovery services we will implement an effective strategy, which is also tailored to the intricate Cambodian context.
             </p>
@@ -169,9 +166,9 @@ export default function DisputeResolutionPage() {
                   Resolution
                 </h2>
                 <p className="text-brand-gray font-barlow mb-10 leading-relaxed">
-                  After scheduling your consultation, you'll embark on a clear, guided path with Seayeen Group 
-                  towards resolving your debt collection needs. During the consultation, we'll delve into the details 
-                  of your case, leveraging our expertise to evaluate the best course of action. You'll receive:
+                  After scheduling your consultation, you&apos;ll embark on a clear, guided path with Seayeen Group 
+                  towards resolving your debt collection needs. During the consultation, we&apos;ll delve into the details 
+                  of your case, leveraging our expertise to evaluate the best course of action. You&apos;ll receive:
                 </p>
 
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
@@ -221,7 +218,7 @@ export default function DisputeResolutionPage() {
               Ready to Resolve Your Dispute?
             </h2>
             <p className="text-xl font-barlow text-seayeen-100 mb-10 leading-relaxed">
-              Take the first step towards successful debt recovery with Cambodia's trusted experts. 
+              Take the first step towards successful debt recovery with Cambodia&apos;s trusted experts. 
               Our team is ready to provide you with the strategic guidance and support you need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

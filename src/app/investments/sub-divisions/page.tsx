@@ -1,10 +1,8 @@
-import Image from "next/image";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import { 
   MessageCircle, 
   MapPin,
-  Home,
   TrendingUp,
   Shield,
   Users,

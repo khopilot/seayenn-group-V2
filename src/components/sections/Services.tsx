@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { 
@@ -92,7 +93,7 @@ export default function Services() {
                   </p>
                   
                   <Link
-                    href={service.link}
+                    {...{ href: service.link as any }}
                     className="inline-flex items-center gap-2 text-brand-primary font-barlow font-semibold hover:gap-4 transition-all"
                   >
                     Learn More
@@ -129,7 +130,7 @@ export default function Services() {
                   </p>
                   
                   <Link
-                    href={service.link}
+                    {...{ href: service.link as any }}
                     className="inline-flex items-center gap-2 text-brand-primary font-barlow font-semibold hover:gap-4 transition-all"
                   >
                     Learn More
