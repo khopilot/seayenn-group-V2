@@ -1,0 +1,67 @@
+{
+  "templates": {
+    "explore-codebase": {
+      "agent": "general-purpose",
+      "description": "Map and understand the codebase structure",
+      "prompt": "Analyze the codebase structure for the seayenn-revamp project. Focus on:\n1. Directory structure and organization\n2. Key components and their relationships\n3. Configuration files and their purposes\n4. Main entry points and routing\n5. Shared utilities and libraries\n\nProvide a clear overview of the architecture."
+    },
+    "component-builder": {
+      "agent": "typescript-architect",
+      "description": "Build React/Next.js components",
+      "prompt": "Create a new React component following the project conventions:\n- Use TypeScript with strict typing\n- Follow existing component patterns\n- Use TailwindCSS for styling\n- Implement with CVA for variants when needed\n- Include proper props interface\n- Follow the project's file structure"
+    },
+    "performance-audit": {
+      "agent": "performance-cost-optimizer",
+      "description": "Analyze and optimize performance",
+      "prompt": "Perform a comprehensive performance audit:\n1. Analyze bundle size and code splitting\n2. Check Core Web Vitals metrics\n3. Identify rendering bottlenecks\n4. Review image optimization\n5. Suggest performance improvements\n6. Check for unnecessary re-renders"
+    },
+    "api-design": {
+      "agent": "api-gateway-designer",
+      "description": "Design API endpoints and architecture",
+      "prompt": "Design API architecture for the application:\n1. Define RESTful endpoints\n2. Plan authentication strategy\n3. Design error handling\n4. Implement rate limiting\n5. Set up proper TypeScript types\n6. Follow Next.js API route conventions"
+    },
+    "debug-issue": {
+      "agent": "full-stack-debugger",
+      "description": "Debug complex issues",
+      "prompt": "Debug the reported issue:\n1. Identify the root cause\n2. Check for TypeScript errors\n3. Review console logs and errors\n4. Trace the execution flow\n5. Propose a fix with minimal changes\n6. Verify the solution"
+    },
+    "test-implementation": {
+      "agent": "general-purpose",
+      "description": "Implement tests for components",
+      "prompt": "Create tests for the specified component:\n1. Write unit tests for logic\n2. Add component tests\n3. Test edge cases\n4. Mock external dependencies\n5. Ensure good coverage\n6. Follow testing best practices"
+    },
+    "documentation": {
+      "agent": "technical-contract-writer",
+      "description": "Write technical documentation",
+      "prompt": "Create comprehensive documentation:\n1. API documentation\n2. Component usage examples\n3. Setup instructions\n4. Architecture decisions\n5. Development workflow\n6. Deployment guide"
+    },
+    "migration-plan": {
+      "agent": "laravel-to-modern-migrator",
+      "description": "Plan migration strategies",
+      "prompt": "Create a migration plan:\n1. Analyze current implementation\n2. Define target architecture\n3. Create incremental steps\n4. Identify risks and mitigations\n5. Plan rollback strategies\n6. Estimate timeline"
+    }
+  },
+  "workflows": {
+    "full-feature": [
+      "explore-codebase",
+      "component-builder",
+      "api-design",
+      "test-implementation",
+      "documentation"
+    ],
+    "optimization": [
+      "performance-audit",
+      "debug-issue"
+    ],
+    "refactor": [
+      "explore-codebase",
+      "migration-plan",
+      "component-builder"
+    ]
+  },
+  "parallel_execution": {
+    "enabled": true,
+    "max_concurrent": 3,
+    "timeout_seconds": 120
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "project": {
+    "name": "seayenn-revamp",
+    "type": "nextjs",
+    "packageManager": "pnpm",
+    "version": "1.0.0"
+  },
+  "commands": {
+    "dev": {
+      "command": "pnpm dev",
+      "description": "Start development server",
+      "category": "development"
+    },
+    "build": {
+      "command": "pnpm build",
+      "description": "Build for production",
+      "category": "production"
+    },
+    "start": {
+      "command": "pnpm start",
+      "description": "Start production server",
+      "category": "production"
+    },
+    "lint": {
+      "command": "pnpm lint",
+      "description": "Run ESLint",
+      "category": "quality"
+    },
+    "typecheck": {
+      "command": "pnpm type-check",
+      "description": "Check TypeScript types",
+      "category": "quality"
+    },
+    "format": {
+      "command": "pnpm format",
+      "description": "Format code with Prettier",
+      "category": "quality"
+    },
+    "format:check": {
+      "command": "pnpm format:check",
+      "description": "Check code formatting",
+      "category": "quality"
+    },
+    "install": {
+      "command": "pnpm install",
+      "description": "Install dependencies",
+      "category": "setup"
+    },
+    "clean": {
+      "command": "rm -rf .next node_modules",
+      "description": "Clean build and dependencies",
+      "category": "maintenance"
+    },
+    "analyze": {
+      "command": "ANALYZE=true pnpm build",
+      "description": "Analyze bundle size",
+      "category": "optimization"
+    }
+  },
+  "aliases": {
+    "d": "dev",
+    "b": "build",
+    "l": "lint",
+    "t": "typecheck",
+    "f": "format"
+  },
+  "workflows": {
+    "quality": ["typecheck", "lint", "format:check"],
+    "prepare": ["install", "typecheck", "lint"],
+    "deploy": ["typecheck", "lint", "build"]
+  }
+}
