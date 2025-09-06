@@ -17,14 +17,15 @@ export default function Navigation() {
   const pathname = usePathname();
 
   // Pages with dark hero sections
-  const darkPages = ["/", "/medical-repatriation", "/dispute-resolution", "/faq"];
+  const darkPages = ["/", "/medical-repatriation", "/dispute-resolution", "/faq", "/contact"];
   const isDarkPage = darkPages.includes(pathname);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial scroll position
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -35,7 +36,7 @@ export default function Navigation() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled && "bg-white/95 backdrop-blur-sm shadow-sm"
+      scrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : ""
     )}>
       <Container>
         <nav className="flex items-center justify-between py-6" aria-label="Global">
@@ -111,12 +112,14 @@ export default function Navigation() {
         </div>
         
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button 
-            variant={scrolled || !isDarkPage ? "primary" : "outline"} 
-            className={!scrolled && isDarkPage ? "border-white text-white hover:bg-white hover:text-brand-primary" : ""}
-          >
-            Contact Us
-          </Button>
+          <Link {...{ href: "/contact" as any }}>
+            <Button 
+              variant={scrolled || !isDarkPage ? "primary" : "outline"} 
+              className={!scrolled && isDarkPage ? "border-white text-white hover:bg-white hover:text-brand-primary" : ""}
+            >
+              Contact Us
+            </Button>
+          </Link>
         </div>
         </nav>
       </Container>
@@ -190,9 +193,11 @@ export default function Navigation() {
                 })}
               </div>
               <div className="py-6">
-                <Button variant="primary" className="w-full">
-                  Contact Us
-                </Button>
+                <Link {...{ href: "/contact" as any }} onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="primary" className="w-full">
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
