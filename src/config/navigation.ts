@@ -11,6 +11,7 @@ export const mainNavigation: NavigationItem[] = [
   { name: "Dispute Resolution", href: "/dispute-resolution" },
   { name: "Medical Repatriation", href: "/medical-repatriation" },
   { name: "FAQ", href: "/faq" },
+  { name: "Contact", href: "/contact" },
 ];
 
 // Footer specific sections
